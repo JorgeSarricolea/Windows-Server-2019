@@ -23,7 +23,16 @@ images.forEach(function (image, index) {
 
 let menu = document.querySelector('.menu');
 let menuContainer = document.querySelector('.menu-container');
+let options = document.querySelectorAll('.option');
 
 menu.addEventListener('click', function () {
     menuContainer.classList.toggle('active-menu');
 });
+
+// Función para ocultar el contenedor de secciones del menú
+options.forEach(function (option) {
+    option.addEventListener('click', function () {
+        menuContainer.classList.remove('active-menu');
+    });
+});
+
