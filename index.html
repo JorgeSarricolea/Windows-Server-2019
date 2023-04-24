@@ -10,6 +10,7 @@
     <!-- Template Main CSS File -->
     <link href="styles.css" rel="stylesheet">
 </head>
+
 <body>
     <!-- Header -->
     <header>
@@ -20,12 +21,130 @@
     </header>
     <!-- Section Cards -->
     <section>
-        <div class="card">
-            <img src="assets/cards/step1.jpg" alt="">
-            <h3>Step 1.</h3>
-            <p>Una vez tengamos VirtualBox instalado y el ISO de WindowsServer listo, lo ejecutaremos y lo primero que
-                deberemos hacer es crear una nueva partición del tamaño máximo.</p>
+        <h1 style="color: #024959" ;>Instalación y configuración de entorno</h1>
+        <div class="separator"></div>
+        <div class="row">
+            <div class="card">
+                <img src="assets/cards/step1.jpg" alt="">
+                <h3>Step 1.</h3>
+                <p>Una vez tengamos VirtualBox instalado y el ISO de WindowsServer listo, lo ejecutaremos y lo primero
+                    que
+                    deberemos hacer es crear una nueva partición del tamaño máximo.</p>
+            </div>
+            <div class="card">
+                <img src="assets/cards/step2.jpg" alt="">
+                <h3>Step 2.</h3>
+                <p>Posteriormente, se formatea el disco de 49.5 GB y con esto empezará a preparar todo para la
+                    instalación.</p>
+            </div>
+            <div class="card">
+                <img src="assets/cards/step4.jpg" alt="">
+                <h3>Step 3.</h3>
+                <p>Se reiniciará y empezará a preparar el equipo.</p>
+            </div>
         </div>
+
+        <div class="row">
+            <div class="card">
+                <img src="assets/cards/step5.jpg" alt="">
+                <h3>Step 4.</h3>
+                <p>Se configura una contraseña, considerar que debe contener números, letras, símbolos.</p>
+            </div>
+            <div class="card">
+                <img src="assets/cards/step6.jpg" alt="">
+                <h3>Step 5.</h3>
+                <p>Para poder ingresar se debe usar la combinación de teclas: ctrl+supr. Una vez la instalación haya
+                    quedado
+                    correctamente, se nos abrirá el “Administrador del servidor” donde veremos todas las opciones y
+                    características d en
+                    nuestro equipo. En el menú izquierdo, nos iremos a “Panel local” y ahí configuraremos el nombre del
+                    equipo y la
+                    Dirección IP.</p>
+            </div>
+            <div class="card">
+                <img src="assets/cards/step7.png" alt="">
+                <h3>Step 6.</h3>
+                <p>Por default aparece un nombre alfanumérico, nosotros solo damos click para modificarlo. Nosotros le
+                    hemos puesto “windows-server-2019”. Una vez hayamos modificado el nombre daremos click en aceptar y
+                    finalmente se reiniciará el equipo.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="card">
+                <img src="assets/cards/step8.png" alt="">
+                <h3>Step 7.</h3>
+                <p>Después de haber configurado el nombre del servidor, nos iremos a modificar la Dirección IP;
+                    seguiremos la opción donde dice Ethernet > Propiedades > Propiedades: Protocolo de Internet versión
+                    4 (TPC/IPv4) y ahí será donde configuraremos la Dirección IP, en nuestro caso le hemos puesto
+                    “192.168.100.2”. Posteriormente, la Máscara de subred es 255.255.255.0 y finalmente, para el
+                    Servidor DNS preferido colocaremos la misma Dirección IP.
+                    <br><br>Nota: Consideremos que tiene que ser una IP diferente a la de nuestro equipo de Windows
+                    local (162.198.100.20).
+                </p>
+            </div>
+            <div class="card">
+                <img src="assets/cards/step9.png" alt="">
+                <h3>Step 8.</h3>
+                <p>En el menú superior, daremos click en Administrar > Agregar roles y características > Roles de
+                    servidor y aquí nos aparecerá una lista de opciones, nosotros seleccionaremos “Servicios de Dominio
+                    de Active Directory”.</p>
+            </div>
+            <div class="card">
+                <img src="assets/cards/step10.png" alt="">
+                <h3>Step 9.</h3>
+                <p>Damos click en “Siguiente”, nuevamente nos mostrará las características, damos en “Siguiente” hasta
+                    que nos aparezca la opción de “Instalar”. Esperaremos a que la instalación concluya, esto nos
+                    permitirá trabajar con los dominios.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="card">
+                <img src="assets/cards/step11.png" alt="">
+                <h3>Step 10.</h3>
+                <p>Una vez la instalación haya quedado finalizada daremos click en “Cerrar”.</p>
+            </div>
+            <div class="card">
+                <img src="assets/cards/step12.png" alt="">
+                <h3>Step 11.</h3>
+                <p>En el menú superior, la banderita nos va a indicar que tenemos un detalle, y es para poder configurar
+                    el dominio</p>
+            </div>
+            <div class="card">
+                <img src="assets/cards/step13.jpg" alt="">
+                <h3>Step 12.</h3>
+                <p>Daremos click donde dice “Promover este servidor a controlador de dominio” y se nos abrirá una
+                    ventana y daremos click en la opción de “Agregar un nuevo dominio”; nosotros hemos puesto
+                    “equipo6.net” y damos click en “Siguiente”.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="card">
+                <img src="assets/cards/step14.png" alt="">
+                <h3>Step 13.</h3>
+                <p>Nos pedirá seleccionar el Nivel funcional, dejamos el que viene por default, colocaremos una
+                    contraseña nueva y daremos click en “Siguiente”. (Considerar los mismos requisitos de seguridad para
+                    la contraseña ).</p>
+            </div>
+            <div class="card">
+                <img src="assets/cards/step15.png" alt="">
+                <h3>Step 14.</h3>
+                <p>Nos aparecerá el nombre del dominio que hemos colocado anteriormente, damos click en “Siguiente” y si
+                    todo se ha configurado correctamente deberemos llegar a la pestaña de “Instalar”.</p>
+            </div>
+            <div class="card">
+                <img src="assets/cards/step16.png" alt="">
+                <h3>Step 15.</h3>
+                <p>Una vez que la instalación haya quedado finalizada, nos pedirá reiniciar el equipo, lo hacemos y con
+                    esto debe haber quedado esta configuración para el dominio. (El reinicio puede tardar un poco más de
+                    lo esperado).</p>
+            </div>
+        </div>
+
+        <h1 style="color: #024959" ;>Instalación y configuración de entorno</h1>
+        <div class="separator"></div>
     </section>
 </body>
 
