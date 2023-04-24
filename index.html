@@ -10,17 +10,29 @@
     <!-- Template Main CSS File -->
     <link href="styles.css" rel="stylesheet">
 </head>
+
 <body>
     <!-- Header -->
     <header>
         <div class="container">
             <h1>Windows Server 2019</h1>
-            <h2>Equipo No. 6</h2>
+            <h2 class="menu">Menú</h2>
+        </div>
+        <div class="menu-container">
+            <li><a href="#installation">Instalación y configuración de entorno</a></li>
+            <li><a href="#user-creation">Creación de usuarios</a></li>
+            <li><a href="#DHCP-settings">Configuración de DHCP</a></li>
+            <h3>Integrantes</h3>
+            <p>Aldaz Carrillo, Ángel Daniel</p>
+            <p>Gonzalez Islas, Felix Martin</p>
+            <p>Martinez Echavarría, Bryan Eduardo</p>
+            <p>Monterrubio Acuña, Francisco</p>
+            <p>Sarricolea Veyro, Jorge</p>
         </div>
     </header>
     <!-- Section Cards -->
     <section>
-        <h1 style="color: #024959" ;>Instalación y configuración de entorno</h1>
+        <h1 style="color: #024959"; id="installation">Instalación y configuración de entorno</h1>
         <div class="separator"></div>
 
         <div class="row">
@@ -143,7 +155,7 @@
             </div>
         </div>
 
-        <h1 style="color: #024959" ;>Creación de usuarios</h1>
+        <h1 style="color: #024959"; id="user-creation">Creación de usuarios</h1>
         <div class="separator"></div>
 
         <div class="row">
@@ -223,9 +235,185 @@
                     las características para la creación de la contraseña.</p>
             </div>
         </div>
+
+        <div class="row">
+            <div class="card">
+                <img src="assets/cards/step27.jpg" alt="">
+                <h3>Step 13.</h3>
+                <p>Regresamos a local server, nos dirigimos a la pestaña de administrar y damos click en agregar roles y
+                    caracteristicas.</p>
+            </div>
+            <div class="card">
+                <img src="assets/cards/step28.jpg" alt="">
+                <h3>Step 14.</h3>
+                <p>Nos dirigimos a seleccion de servidor, es ahí donde cambiaremos roles de los usuarios.</p>
+            </div>
+            <div class="card">
+                <img src="assets/cards/step29.jpg" alt="">
+                <h3>Step 15.</h3>
+                <p>Seleccionamos la opcion de servidor DHCP para poder configurarlo.</p>
+            </div>
+        </div>
+
+        <h1 style="color: #024959"; id="DHCP-settings">Configuración de DHCP</h1>
+        <div class="separator"></div>
+
+        <div class="row">
+            <div class="card">
+                <img src="assets/cards/step30.jpg" alt="">
+                <h3>Step 1.</h3>
+                <p>Agregamos la caracteristica y daremos click en "Siguiente".</p>
+            </div>
+            <div class="card">
+                <img src="assets/cards/step31.jpg" alt="">
+                <h3>Step 2.</h3>
+                <p>Se seleccionan las caracteristicas automaticamente y procedemos a darle siguiente. El DHCP lo que nos
+                    permitira a los equipos y dispositivos conectarse a otros recursos de red como servidores DNS, WINS
+                    y enrutadores.</p>
+            </div>
+            <div class="card">
+                <img src="assets/cards/step32.jpg" alt="">
+                <h3>Step 3.</h3>
+                <p>Se nos despliega información con respecto a la configuración elegida, procedemos a hacer click a
+                    Siguiente</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="card">
+                <img src="assets/cards/step33.jpg" alt="">
+                <h3>Step 4.</h3>
+                <p>Damos click en "Confirmar" y finalmente en "Instalar". Después de que la instalación haya finalizado
+                    se reiniciará el servidor.</p>
+            </div>
+            <div class="card">
+                <img src="assets/cards/step34.jpg" alt="">
+                <h3>Step 5.</h3>
+                <p>En el menú superior, en el ícono de la bandera nos aparecerá un Warning, debemos completar la
+                    configuración que nos indica.</p>
+            </div>
+            <div class="card">
+                <img src="assets/cards/step35.jpg" alt="">
+                <h3>Step 6.</h3>
+                <p>Procedemos a hacer click a Siguiente.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="card">
+                <img src="assets/cards/step36.jpg" alt="">
+                <h3>Step 7.</h3>
+                <p>Nos aseguramos que la opcion mostrada esté seleccionada y le damos "Confirmar".</p>
+            </div>
+            <div class="card">
+                <img src="assets/cards/step37.jpg" alt="">
+                <h3>Step 8.</h3>
+                <p>Una vez finalizada la configuración solo vamos a cerrar, se mostrará algo como en la imagen.</p>
+            </div>
+            <div class="card">
+                <img src="assets/cards/step38.jpg" alt="">
+                <h3>Step 9.</h3>
+                <p>Ingresamos al apartado de DHCP > Le damos clic derecho al servidor e ingrsamos a Administrador DHCP.
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="card">
+                <img src="assets/cards/step39.jpg" alt="">
+                <h3>Step 10.</h3>
+                <p>Desplegamos el menú hasta llegar a como se muestra en la imagen.</p>
+            </div>
+            <div class="card">
+                <img src="assets/cards/step40.jpg" alt="">
+                <h3>Step 11.</h3>
+                <p>Le damos click derecho al protocolo IPv4 y nos dirigimos a "Ámbito nuevo..."</p>
+            </div>
+            <div class="card">
+                <img src="assets/cards/step41.jpg" alt="">
+                <h3>Step 12.</h3>
+                <p>Ingresaremos a esta ventana, le damos a "Siguiente".</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="card">
+                <img src="assets/cards/step42.jpg" alt="">
+                <h3>Step 13.</h3>
+                <p>Le agregamos un nombre y una descripcion referente al servidor.</p>
+            </div>
+            <div class="card">
+                <img src="assets/cards/step43.jpg" alt="">
+                <h3>Step 14.</h3>
+                <p>Se configura el rango de las ips, agregando la inicial, la final, la longitud y la mascara
+                    correspondiente.</p>
+            </div>
+            <div class="card">
+                <img src="assets/cards/step44.jpg" alt="">
+                <h3>Step 15.</h3>
+                <p>En esta pestaña no es necesario cambiar nada por lo que le damos a "Siguiente".</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="card">
+                <img src="assets/cards/step45.jpg" alt="">
+                <h3>Step 16.</h3>
+                <p>Configuramos la duracion de la concesion a 365 dias.</p>
+            </div>
+            <div class="card">
+                <img src="assets/cards/step46.jpg" alt="">
+                <h3>Step 17.</h3>
+                <p>Elegimos la opcion de configurar las opciones ahora y le damos "Siguiente" hasta llegar a la pestaña
+                    de "Servidores WINS".</p>
+            </div>
+            <div class="card">
+                <img src="assets/cards/step47.jpg" alt="">
+                <h3>Step 18.</h3>
+                <p>En el caso de usar WINS se llenan los datos correspondientes, pero por la naturaleza de la practican
+                    nosotros no necesitamos de esto, por lo que se deja en blanco y se da "Sigueinte".</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="card">
+                <img src="assets/cards/step48.jpg" alt="">
+                <h3>Step 19.</h3>
+                <p>Seleccionar "Activar este ambito ahora" y "Siguiente".</p>
+            </div>
+            <div class="card">
+                <img src="assets/cards/step49.jpg" alt="">
+                <h3>Step 20.</h3>
+                <p>Con esto quedará finalizada la configuración.</p>
+            </div>
+            <div class="card">
+                <img src="assets/cards/step50.jpg" alt="">
+                <h3>Step 21.</h3>
+                <p>Mientras que la ruta mostrada podemos ver aquellas maquinas con una Dirección IP ya asignada.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="card">
+                <img src="assets/cards/step48.jpg" alt="">
+                <h3>Step 19.</h3>
+                <p>Seleccionar "Activar este ambito ahora" y "Siguiente".</p>
+            </div>
+            <div class="card">
+                <img src="assets/cards/step49.jpg" alt="">
+                <h3>Step 20.</h3>
+                <p>Con esto quedará finalizada la configuración.</p>
+            </div>
+            <div class="card">
+                <img src="assets/cards/step50.jpg" alt="">
+                <h3>Step 21.</h3>
+                <p>Mientras que la ruta mostrada podemos ver aquellas maquinas con una Dirección IP ya asignada.</p>
+            </div>
+        </div>
     </section>
 
     <!-- Template Main JS File -->
     <script src="main.js"></script>
 </body>
+
 </html>

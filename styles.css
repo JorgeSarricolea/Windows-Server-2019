@@ -13,6 +13,9 @@ body {
 header {
     background-color: #3CA6A6;
     color: #024959;
+    width: 100%;
+    z-index: 10000;
+    position: fixed;
 }
 
 header .container {
@@ -22,6 +25,23 @@ header .container {
     width: 80%;
     margin: 0 auto;
     padding: 20px;
+}
+
+.menu {
+    cursor: pointer;
+}
+
+.menu:hover {
+    color: #F2E3D5;
+}
+
+.menu-container {
+    display: none;
+    flex-direction: column;
+}
+
+.active-menu {
+    display: flex;
 }
 
 .separator {
@@ -68,7 +88,7 @@ section {
 
 .active {
     width: 50%;
-    margin: 40px auto;
+    margin: 120px auto;
 }
 
 .rowdirection {

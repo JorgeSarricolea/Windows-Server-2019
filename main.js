@@ -1,3 +1,6 @@
+/* Función para interactividad al dar click sobre las cards
+-------------------------------------------------------------*/
+
 let images = document.querySelectorAll('.card img');
 let cards = document.querySelectorAll('.card');
 
@@ -11,11 +14,16 @@ images.forEach(function (image, index) {
         let activeImage = document.querySelector('.card.active img');
         if (activeImage) {
             activeImage.scrollIntoView();
-        } else {
-            let header = document.querySelector('header');
-            if (header) {
-                header.scrollIntoView();
-            }
         }
     });
+});
+
+/* Función para el menú
+-------------------------------------------------------------*/
+
+let menu = document.querySelector('.menu');
+let menuContainer = document.querySelector('.menu-container');
+
+menu.addEventListener('click', function () {
+    menuContainer.classList.toggle('active-menu');
 });
