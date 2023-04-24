@@ -38,13 +38,13 @@ section {
     padding: 20px;
 }
 
-section .row {
+.row {
     display: flex;
     flex-direction: row;
     gap: 20px;
 }
 
-section .card {
+.card {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -55,11 +55,16 @@ section .card {
     background-color: #024959;
 }
 
-section .card:hover {
+.card:hover {
     scale: 1.05;
     transition: 0.2s ease-in-out;
 }
 
-section .card img {
+.card img {
     border-radius: 15px;
+}
+
+.active {
+    width: 100%;
+    background-color: red;
 }
