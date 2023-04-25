@@ -24,6 +24,11 @@
             <li class="option"><a href="#DHCP-settings">Configuración de DHCP</a></li>
             <li class="option"><a href="#web-services">Instalación de Web Services</a></li>
             <li class="option"><a href="#share-folders-vb">Configuración de carpetas compartidas (VirtualBox)</a></li>
+            <li class="option"><a href="#mysql-server">Instalación de MYSQL Server</a></li>
+            <li class="option"><a href="#mysql">MYSQL Server</a></li>
+            <li class="option"><a href="#mysql-remote">MYSQL Server Remoto</a></li>
+            <li class="option"><a href="#dns-manager-config">Configuración del DNS Manager</a></li>
+            <li class="option"><a href="#mysql-cont">Continuación de MySQL</a></li>
         </div>
     </header>
     <!-- Section Cards -->
@@ -411,7 +416,7 @@
             <div class="card">
                 <img src="assets/cards/step54.jpg" alt="">
                 <h3>Step 25.</h3>
-                <p>Configuraremos windows para poder asignar una ip, por lo que ingresamos a powershell desde la maquina
+                <p>Configuraremos windows para poder asignar una IP, por lo que ingresamos a powershell desde la maquina
                     desead.</p>
             </div>
             <div class="card">
@@ -561,7 +566,8 @@
                 <p>Eliminaremos los dos signos de gato de las lineas mostradas y añadiremos una linea nueva, la cual
                     contendrá el ip de la maquina virtual en la que estamos trabajando y la palabra localhost, en el
                     caso de la usada para el ejemplo sería lo siguiente:<br><br>
-                    <strong>192.168.100.5 localhost</strong></p>
+                    <strong>192.168.100.5 localhost</strong>
+                </p>
             </div>
         </div>
 
@@ -598,12 +604,396 @@
             <div class="card">
                 <img src="assets/cards/step83.png" alt="">
                 <h3>Step 5.</h3>
-                <p>Seleccionamos la opción remarcada, al ejecutar se da click en siguiente hasta llegar a instalar y se instala.</p>
+                <p>Seleccionamos la opción remarcada, al ejecutar se da click en siguiente hasta llegar a instalar y se
+                    instala.</p>
             </div>
             <div class="card">
                 <img src="assets/cards/step84.png" alt="">
                 <h3>Step 6.</h3>
-                <p>Al finalizar la configuración reiniciaremos para que todo quede bien en nuestro entorno de trabajo y se actualicen los cambios.</p>
+                <p>Al finalizar la configuración reiniciaremos para que todo quede bien en nuestro entorno de trabajo y
+                    se actualicen los cambios.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="card">
+                <img src="assets/cards/step85.png" alt="">
+                <h3>Step 7.</h3>
+                <p>Después de reiniciar el windows server debemos revisar si la computadora madre aun tiene conexión al
+                    servidor, por lo que simplemente ingresamos al powershell e ingresamos el comando ipconfig, y como
+                    se puede ver en el apartado de ethernet, tenemos conexión con el servidor y tenemos el ip asignado,
+                    esto quiere decir que el dhcp esta funcionando correctamente.</p>
+            </div>
+            <div class="card">
+                <img src="assets/cards/step86.png" alt="">
+                <h3>Step 8.</h3>
+                <p>De igual forma podemos comprobar que dentro del windows server ya tenemos acceso a la carpeta
+                    compartida.</p>
+            </div>
+            <div class="card">
+                <img src="assets/cards/step87.png" alt="">
+                <h3>Step 9.</h3>
+                <p>Mientras tanto en la carpeta de la máquina madre tenemos los siguientes archivos.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="card">
+                <img src="assets/cards/step88.png" alt="">
+                <h3>Step 10.</h3>
+                <p>Y como podemos apreciar, tambien están en la carpeta compartida dentro de windows server, por lo que
+                    todo funciona en orden y pasaremos a la instalación de estos archivos, para ello los reubicaremos a
+                    la carpeta de documentos.</p>
+            </div>
+        </div>
+
+        <h1 style="color: #024959" ; id="mysql-server">Instalación de MYSQL Server</h1>
+        <div class="separator"></div>
+
+        <div class="row">
+            <div class="card">
+                <img src="assets/cards/step89.png" alt="">
+                <h3>Step 1.</h3>
+                <p>Ejecutamos el archivo llamado Setup.exe (proporcionado por el profesor), realizaremos una instalación
+                    típica, por lo que le daremos siguiente hasta llegar al apartado de inicio de sesión.</p>
+            </div>
+            <div class="card">
+                <img src="assets/cards/step90.png" alt="">
+                <h3>Step 2.</h3>
+                <p>Seleccionaremos el salto de inicio de sesión y le continuamos.</p>
+            </div>
+            <div class="card">
+                <img src="assets/cards/step91.png" alt="">
+                <h3>Step 3.</h3>
+                <p>Es de gran importancia que esta casilla esté seleccionada puesto que configuraremos mysql de
+                    inmediato; una vez seleccionada, procedemos a terminar la instalación.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="card">
+                <img src="assets/cards/step92.png" alt="">
+                <h3>Step 4.</h3>
+                <p>Se abrira una nueva carpeta, nosotros le daremos next hasta llegar a esta ventana, en la cual
+                    seleccionaremos la opcion de standard configuration, le damos siguiente.</p>
+            </div>
+            <div class="card">
+                <img src="assets/cards/step93.png" alt="">
+                <h3>Step 5.</h3>
+                <p>En la siguiente ventana es muy importante seleccionar ambas opciones marcadas, pues la primera se
+                    encarga de instalar mysql como un servicio y la segunda incluye mysql en el bin directory,
+                    continuamos.</p>
+            </div>
+            <div class="card">
+                <img src="assets/cards/step94.png" alt="">
+                <h3>Step 6.</h3>
+                <p>En la siguiente pantalla nosotros debemos crear una contraseña para el usuario root, en este caso y
+                    con el objetivo de la práctica, la contraseña será “123”, al igual que habilitamos el acceso a
+                    máquinas remotas. las prácticas anteriores no suelen ser buenas pues debilitan el sistema pero es
+                    importante para la práctica que se está llevando a cabo. continuamos.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="card">
+                <img src="assets/cards/step95.png" alt="">
+                <h3>Step 7.</h3>
+                <p>En esta pantalla nosotros haremos click al botón Execute, es importante que todas las opciones de
+                    arriba queden palomeadas puesto que de no ser asi, tendríamos que borrar todas las carpetas llamadas
+                    mysql y reinstalar el servicio.</p>
+            </div>
+            <div class="card">
+                <img src="assets/cards/step96.png" alt="">
+                <h3>Step 8.</h3>
+                <p>Con esto finalizaríamos la instalación de MYSQL Server.</p>
+            </div>
+        </div>
+
+        <h1 style="color: #024959" ; id="mysql">MYSQL Server</h1>
+        <div class="separator"></div>
+
+        <div class="row">
+            <div class="card">
+                <img src="assets/cards/step97.png" alt="">
+                <h3>Step 1.</h3>
+                <p>Para entrar a mysql desde powershell, es necesario ingresar el comando subrayado, para luego ingresar
+                    la contraseña del usuario root ue previamente configuramos, una vez ingresado todo, estamos dentro
+                    de mysql.</p>
+            </div>
+            <div class="card">
+                <img src="assets/cards/step98.png" alt="">
+                <h3>Step 2.</h3>
+                <p>Creamos una nueva base de datos llamada datos con el comando mostrado, siempre cuidando el uso de
+                    punto y coma después de cada instrucción.</p>
+            </div>
+            <div class="card">
+                <img src="assets/cards/step99.png" alt="">
+                <h3>Step 3.</h3>
+                <p>Para comprobar la creación de la base de datos se usa el comando resaltado, y como se puede apreciar,
+                    se creó correctamente.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="card">
+                <img src="assets/cards/step100.png" alt="">
+                <h3>Step 4.</h3>
+                <p>Para ingresar a alguna base de datos se aplica el comando subrayado, y como muestra el output, la
+                    acción se realizó correctamente.</p>
+            </div>
+            <div class="card">
+                <img src="assets/cards/step101.png" alt="">
+                <h3>Step 5.</h3>
+                <p>Creamos una nueva tabla dentro de la base de datos, la cual es llamada integrantes, posee tres
+                    columnas: nombre, apellido y matricula, es creada con el siguiente comando:
+                    create table integrantes(Nombre varchar(20), Apellido varchar(20), Matricula varchar(10));</p>
+            </div>
+            <div class="card">
+                <img src="assets/cards/step102.png" alt="">
+                <h3>Step 6.</h3>
+                <p>Usamos el comando show tables; para ver la tabla creada, llamada integrantes.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="card">
+                <img src="assets/cards/step103.png" alt="">
+                <h3>Step 7.</h3>
+                <p>Ingresamos el comando insert into integrantes values(); para poder ingresar datos a nuestra tabla.
+                </p>
+            </div>
+            <div class="card">
+                <img src="assets/cards/step104.png" alt="">
+                <h3>Step 8.</h3>
+                <p>Se emplea el comando select * from integrantes; para poder ver el contenido de nuestra tabla.</p>
+            </div>
+        </div>
+
+        <h1 style="color: #024959" ; id="mysql-remote">MYSQL Server Remoto</h1>
+        <div class="separator"></div>
+
+        <div class="row">
+            <div class="card">
+                <img src="assets/cards/step105.png" alt="">
+                <h3>Step 1.</h3>
+                <p>Para poder usar mysql de forma remota debemos configurar el firewall, por lo que debemos entrar a
+                    esta pestaña e ingresar a configuracion avanzada.</p>
+            </div>
+            <div class="card">
+                <img src="assets/cards/step106.png" alt="">
+                <h3>Step 2.</h3>
+                <p>Agregaremos una nueva regla de conexión por lo que es necesario entrar al apartado mostrado del lado
+                    izquierdo y luego darle click a nueva regla.</p>
+            </div>
+            <div class="card">
+                <img src="assets/cards/step107.png" alt="">
+                <h3>Step 3.</h3>
+                <p>Se elige una regla de tipo puerto.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="card">
+                <img src="assets/cards/step108.png" alt="">
+                <h3>Step 4.</h3>
+                <p>Configuraremos el TCP, agregando el puerto correspondiente a mysql (3306), siguiente.</p>
+            </div>
+            <div class="card">
+                <img src="assets/cards/step109.png" alt="">
+                <h3>Step 5.</h3>
+                <p>Permitimos todas las conexiones,siguiente.</p>
+            </div>
+            <div class="card">
+                <img src="assets/cards/step110.png" alt="">
+                <h3>Step 6.</h3>
+                <p>Seleccionamos todos los perfiles, siguiente.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="card">
+                <img src="assets/cards/step111.png" alt="">
+                <h3>Step 7.</h3>
+                <p>Se le aplica nombre a la regla.</p>
+            </div>
+            <div class="card">
+                <img src="assets/cards/step112.png" alt="">
+                <h3>Step 8.</h3>
+                <p>Creamos una nueva regla de tipo puerto, aplicable en UDP y en el puerto específico de mysql (3306).
+                </p>
+            </div>
+            <div class="card">
+                <img src="assets/cards/step113.png" alt="">
+                <h3>Step 9.</h3>
+                <p>Se repiten las configuraciones anteriores y se le asigna el nombre correspondiente.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="card">
+                <img src="assets/cards/step114.png" alt="">
+                <h3>Step 10.</h3>
+                <p>Una vez realizadas estas configuraciones, ya tenemos acceso de forma remota (desde la máquina madre)
+                    a la database del windows server.</p>
+            </div>
+            <div class="card">
+                <img src="assets/cards/step115.png" alt="">
+                <h3>Step 11.</h3>
+                <p>Realizamos una inyección remota, utilizamos los comandos señalados y previamente usados, entramos a
+                    la base de datos “datos” para después mostrar las tablas que contiene, insertar una línea en la
+                    tabla integrantes y luego mostrar los datos de la tabla cambiados.</p>
+            </div>
+            <div class="card">
+                <img src="assets/cards/step116.png" alt="">
+                <h3>Step 12.</h3>
+                <p>Y como podemos observar desde el windows server, ¡la inyección fue un exito!.</p>
+            </div>
+        </div>
+
+        <h1 style="color: #024959" ; id="dns-manager-config">Configuración del DNS Manager</h1>
+        <div class="separator"></div>
+
+        <div class="row">
+            <div class="card">
+                <img src="assets/cards/step118.png" alt="">
+                <h3>Step 1.</h3>
+                <p>Dentro de la administración de dns nos dirigimos hacia la ruta mostrada, damos click derecho a zonas
+                    de búsqueda inversa y hacemos click en zona nueva.</p>
+            </div>
+            <div class="card">
+                <img src="assets/cards/step119.png" alt="">
+                <h3>Step 2.</h3>
+                <p>Elegimos una zona principal y nos fijamos que esté marcada la opción de Almacenar la zona en Active
+                    Directory "Siguiente".</p>
+            </div>
+            <div class="card">
+                <img src="assets/cards/step120.png" alt="">
+                <h3>Step 3.</h3>
+                <p>Seleccionamos la segunda opción, para que aplique la zona para todos los servidores dns que se
+                    ejecutan en el dominio.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="card">
+                <img src="assets/cards/step121.png" alt="">
+                <h3>Step 4.</h3>
+                <p>Será aplicable para IPV4.</p>
+            </div>
+            <div class="card">
+                <img src="assets/cards/step122.png" alt="">
+                <h3>Step 5.</h3>
+                <p>Ingresamos la Dirección IP de la red, siendo esta: <strong>192.168.100</strong> para después
+                    seleccionar el nombre de la zona de búsqueda inversa.</p>
+            </div>
+            <div class="card">
+                <img src="assets/cards/step123.png" alt="">
+                <h3>Step 6.</h3>
+                <p>Seleccionamos la opción recomendada para Active Directory.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="card">
+                <img src="assets/cards/step124.png" alt="">
+                <h3>Step 7.</h3>
+                <p>Una vez haya quedado toda la configuración de instalación solo dareos click en "Finalizar".</p>
+            </div>
+            <div class="card">
+                <img src="assets/cards/step125.png" alt="">
+                <h3>Step 8.</h3>
+                <p>Como se puede observar, ya está disponible nuestra nueva zona.</p>
+            </div>
+            <div class="card">
+                <img src="assets/cards/step136.png" alt="">
+                <h3>Step 9.</h3>
+                <p>Ingresamos a la zona, damos click derecho dentro y elegimos nuevo puntero PTR.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="card">
+                <img src="assets/cards/step137.png" alt="">
+                <h3>Step 10.</h3>
+                <p>Comprobamos la conexión directa e inversa, dándonos una respuesta correcta.</p>
+            </div>
+            <div class="card">
+                <img src="assets/cards/step138.png" alt="">
+                <h3>Step 11.</h3>
+                <p>Ingresamos el ip del servidor y el nombre del dominio, aceptamos.</p>
+            </div>
+        </div>
+
+        <h1 style="color: #024959" ; id="mysql-cont">Continuación de MySQL</h1>
+        <div class="separator"></div>
+
+        <div class="row">
+            <div class="card">
+                <img src="assets/cards/step126.png" alt="">
+                <h3>Step 1.</h3>
+                <p>Para poder crear un usuario nuevo se usa el código señalado: create user ‘nombreDelUsuario’@’%’
+                    identified by “contraseña”; Se usa el porcentaje para señalar una conexión remota.</p>
+            </div>
+            <div class="card">
+                <img src="assets/cards/step127.png" alt="">
+                <h3>Step 2.</h3>
+                <p>Realizamos lo mismo pero ahora con localhost para que se reconozca el usuario localmente.</p>
+            </div>
+            <div class="card">
+                <img src="assets/cards/step128.png" alt="">
+                <h3>Step 3.</h3>
+                <p>La acción anterior se puede comprobar revisando las columnas de la tabla user.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="card">
+                <img src="assets/cards/step129.png" alt="">
+                <h3>Step 4.</h3>
+                <p>Con el comando mostrado le asignamos todos los privilegios al usuario mostrado, es decir puede
+                    acceder a toda la base de datos, esto señalado por el parámetro *.*.</p>
+            </div>
+            <div class="card">
+                <img src="assets/cards/step130.png" alt="">
+                <h3>Step 5.</h3>
+                <p>Como podemos observar, ahora ingresamos con el nuevo usuario y nos permite ver las bases de datos, lo
+                    que significa que los permisos están bien asignados.</p>
+            </div>
+            <div class="card">
+                <img src="assets/cards/step131.png" alt="">
+                <h3>Step 6.</h3>
+                <p>Cuando intentamos ingresar de manera remota nos podemos percatar que los permisos no están
+                    disponibles de esta forma, por lo que hay que asignarlos.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="card">
+                <img src="assets/cards/step132.png" alt="">
+                <h3>Step 7.</h3>
+                <p>Ingresamos desde root y realizamos el cambio.</p>
+            </div>
+            <div class="card">
+                <img src="assets/cards/step133.png" alt="">
+                <h3>Step 8.</h3>
+                <p>Cambio el cual podemos observar en la terminal remota.</p>
+            </div>
+            <div class="card">
+                <img src="assets/cards/step134.png" alt="">
+                <h3>Step 9.</h3>
+                <p>A manera de práctica ingresamos un dato de forma remota en nuestra tabla de integrantes, que sería
+                    Pedro Alcocer con la matrícula E12345678, usaremos este registro para eliminar un dato.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="card">
+                <img src="assets/cards/step135.png" alt="">
+                <h3>Step 10.</h3>
+                <p>Como se puede observar en la primera tabla, se encuentran tres datos, dos que previamente agregamos y
+                    el de Pedro el cual agregamos recientemente de forma remota, después aplicamos la linea de codigo:
+                    delete from integrantes where Nombre=”Pedro”; lo que nos permitió borrar esa fila de datos, lo cual
+                    se muestra en la tabla final.</p>
             </div>
         </div>
     </section>
@@ -621,8 +1011,7 @@
             </div>
             <div class="container">
                 <h3>Instituto Tecnológico de Mérida</h3>
-                <h4>Campus Poniente</h4>
-                <h4>Taller de Sistemas Operativos</h4>
+                <h3>Taller de Sistemas Operativos</h3>
             </div>
         </div>
     </footer>

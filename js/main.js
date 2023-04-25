@@ -35,4 +35,3 @@ options.forEach(function (option) {
         menuContainer.classList.remove('active-menu');
     });
 });
-

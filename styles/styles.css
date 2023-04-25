@@ -52,11 +52,11 @@ header .container {
 
 .active-menu {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     padding: 20px;
     width: 80%;
     margin: 0 auto;
-    gap: 40px;
+    gap: 10px;
     transition: 0.2s ease-in-out;
     list-style: none;
 }
@@ -128,4 +128,8 @@ footer .main-container {
     margin: 0 auto;
     justify-content: space-between;
     align-items: center;
+}
+
+footer .container:nth-child(2) {
+    text-align: right;
 }
