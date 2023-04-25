@@ -8,7 +8,7 @@
     <title>Windows Server 2019</title>
 
     <!-- Template Main CSS File -->
-    <link href="styles.css" rel="stylesheet">
+    <link href="/styles/styles.css" rel="stylesheet">
 </head>
 
 <body>
@@ -22,11 +22,13 @@
             <li class="option"><a href="#installation">Instalación y configuración de entorno</a></li>
             <li class="option"><a href="#user-creation">Creación de usuarios</a></li>
             <li class="option"><a href="#DHCP-settings">Configuración de DHCP</a></li>
+            <li class="option"><a href="#web-services">Instalación de Web Services</a></li>
+            <li class="option"><a href="#share-folders-vb">Configuración de carpetas compartidas (VirtualBox)</a></li>
         </div>
     </header>
     <!-- Section Cards -->
     <section>
-        <h1 style="color: #024959"; id="installation">Instalación y configuración de entorno</h1>
+        <h1 style="color: #024959" ; id="installation">Instalación y configuración de entorno</h1>
         <div class="separator"></div>
 
         <div class="row">
@@ -148,7 +150,7 @@
             </div>
         </div>
 
-        <h1 style="color: #024959"; id="user-creation">Creación de usuarios</h1>
+        <h1 style="color: #024959" ; id="user-creation">Creación de usuarios</h1>
         <div class="separator"></div>
 
         <div class="row">
@@ -248,7 +250,7 @@
             </div>
         </div>
 
-        <h1 style="color: #024959"; id="DHCP-settings">Configuración de DHCP</h1>
+        <h1 style="color: #024959" ; id="DHCP-settings">Configuración de DHCP</h1>
         <div class="separator"></div>
 
         <div class="row">
@@ -395,7 +397,8 @@
             <div class="card">
                 <img src="assets/cards/step52.jpg" alt="">
                 <h3>Step 23.</h3>
-                <p>Configurar el adaptador 1 de la siguiente forma, importante que el nombre sea el adaptador alámbrico y no inalámbrico.</p>
+                <p>Configurar el adaptador 1 de la siguiente forma, importante que el nombre sea el adaptador alámbrico
+                    y no inalámbrico.</p>
             </div>
             <div class="card">
                 <img src="assets/cards/step53.jpg" alt="">
@@ -408,7 +411,8 @@
             <div class="card">
                 <img src="assets/cards/step54.jpg" alt="">
                 <h3>Step 25.</h3>
-                <p>Configuraremos windows para poder asignar una ip, por lo que ingresamos a powershell desde la maquina desead.</p>
+                <p>Configuraremos windows para poder asignar una ip, por lo que ingresamos a powershell desde la maquina
+                    desead.</p>
             </div>
             <div class="card">
                 <img src="assets/cards/step55.jpg" alt="">
@@ -418,14 +422,15 @@
             <div class="card">
                 <img src="assets/cards/step56.jpg" alt="">
                 <h3>Step 27.</h3>
-                <p>Como podemos observar, el ethernet ya recibió el servidor y ya tiene una Dirección IP, el cual es el 192.168.100.30, el cual pertenece al rango configurado previamente.</p>
+                <p>Como podemos observar, el ethernet ya recibió el servidor y ya tiene una Dirección IP, el cual es el
+                    192.168.100.30, el cual pertenece al rango configurado previamente.</p>
             </div>
         </div>
 
         <div class="row">
             <div class="card">
                 <img src="assets/cards/step57.jpg" alt="">
-                <h3>Step 26.</h3>
+                <h3>Step 28.</h3>
                 <p>En el caso de no conectarse se ocupa este comando para renovar las Direcciones IP.</p>
             </div>
             <div class="card">
@@ -439,8 +444,171 @@
                 <p>Con esto concluiríamos la configuración del DHCP.</p>
             </div>
         </div>
+
+        <div class="row">
+            <div class="card">
+                <img src="assets/cards/step60.png" alt="">
+                <h3>Step 31.</h3>
+                <p>Otra forma de comprobar la conexion es realizando un ping, ya sea con el ip de la maquina de windows
+                    server o directamente con el nombre del servidor.</p>
+            </div>
+            <div class="card">
+                <img src="assets/cards/step61.png" alt="">
+                <h3>Step 32.</h3>
+                <p>Aquí en esta imagen se puede ver como se utiliza el comando ping para comprobar la conexión.</p>
+            </div>
+        </div>
+
+        <h1 style="color: #024959" ; id="web-services">Instalación de Web Services</h1>
+        <div class="separator"></div>
+
+        <div class="row">
+            <div class="card">
+                <img src="assets/cards/step62.png" alt="">
+                <h3>Step 1.</h3>
+                <p>Regresamos al menú de “Servidor local”, en la pestaña de administrar, ingresamos a “Agregar roles y
+                    características”.</p>
+            </div>
+            <div class="card">
+                <img src="assets/cards/step63.png" alt="">
+                <h3>Step 2.</h3>
+                <p>En la pestaña de "Roles de servidor", buscamos y seleccionamos el servidor web y la agregamos,
+                    procedemos a darle a siguiente.</p>
+            </div>
+            <div class="card">
+                <img src="assets/cards/step64.png" alt="">
+                <h3>Step 3.</h3>
+                <p>Nuevamente seleccionamos siguiente en la ventana de características.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="card">
+                <img src="assets/cards/step65.png" alt="">
+                <h3>Step 4.</h3>
+                <p>Se nos muestra una pequeña descripcion y procedemos a darle a siguiente.</p>
+            </div>
+            <div class="card">
+                <img src="assets/cards/step66.png" alt="">
+                <h3>Step 5.</h3>
+                <p>Ubicamos y seleccionamos Servidor FTP, de lado derecho se nos da una pequeña descripción de este
+                    servicio, procedemos a darle siguiente.</p>
+            </div>
+            <div class="card">
+                <img src="assets/cards/step67.png" alt="">
+                <h3>Step 6.</h3>
+                <p>Finalmente comenzaremos la instalación dando click en "Instalar".</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="card">
+                <img src="assets/cards/step68.png" alt="">
+                <h3>Step 7.</h3>
+                <p>En el menú izquierdo, nos iremos a la opción que dice "WS" donde se mostrará lo que acabamos de
+                    configurar si aparece conmo en la imagen significa que se ha instalado correctamente.</p>
+            </div>
+            <div class="card">
+                <img src="assets/cards/step70.png" alt="">
+                <h3>Step 8.</h3>
+                <p>Ingresamos a la ruta mostrada, lo que nos dará paso a la pagina principal.</p>
+            </div>
+            <div class="card">
+                <img src="assets/cards/step71.png" alt="">
+                <h3>Step 9.</h3>
+                <p>Ingresamos a la opción “Explorar” situada donde se señalada.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="card">
+                <img src="assets/cards/step72.png" alt="">
+                <h3>Step 10.</h3>
+                <p>Esto nos da acceso al explorador e archivos en el que se encontrará la pagina que nosotros
+                    habilitaremos dentro de nuestro servidor web.</p>
+            </div>
+            <div class="card">
+                <img src="assets/cards/step73.png" alt="">
+                <h3>Step 11.</h3>
+                <p>Le daremos click derecho al archivo mostrado, nos iremos a abrir con y elegiremos la opción
+                    resaltada.</p>
+            </div>
+            <div class="card">
+                <img src="assets/cards/step75.png" alt="">
+                <h3>Step 12.</h3>
+                <p>Dentro de la aplicacion, localizamos, subrayamos y eliminamos lo señalado. Este documento puede ser
+                    editado para realizar una pagina que posteriormente todos los usuarios que cuenten con acceso al
+                    servidor podrán verla.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="card">
+                <img src="assets/cards/step76.png" alt="">
+                <h3>Step 13.</h3>
+                <p>Ahora configuraremos algunos elementos del web service, para ello ingresaremos a la pestaña de este
+                    equipo y luego al disco Local C.</p>
+            </div>
+            <div class="card">
+                <img src="assets/cards/step77.png" alt="">
+                <h3>Step 14.</h3>
+                <p>Ingresamos a la ruta señalada en la imagen, después seleccionaremos el archivo que tiene por nombre
+                    “hosts” y lo abriremos con Wordpad.</p>
+            </div>
+            <div class="card">
+                <img src="assets/cards/step78.png" alt="">
+                <h3>Step 15.</h3>
+                <p>Eliminaremos los dos signos de gato de las lineas mostradas y añadiremos una linea nueva, la cual
+                    contendrá el ip de la maquina virtual en la que estamos trabajando y la palabra localhost, en el
+                    caso de la usada para el ejemplo sería lo siguiente:<br><br>
+                    <strong>192.168.100.5 localhost</strong></p>
+            </div>
+        </div>
+
+        <h1 style="color: #024959" ; id="share-folders-vb">Configuración de carpetas compartidas (VirtualBox)</h1>
+        <div class="separator"></div>
+
+        <div class="row">
+            <div class="card">
+                <img src="assets/cards/step79.png" alt="">
+                <h3>Step 1.</h3>
+                <p>Dentro de las opciones de virtual box, configuraremos las preferencias de carpetas compartidas, dando
+                    click derecho donde se señala y eligiendo la opción con el nombre ya mencionado.</p>
+            </div>
+            <div class="card">
+                <img src="assets/cards/step80.png" alt="">
+                <h3>Step 2.</h3>
+                <p>Debemos darle click al símbolo marcado del lado derecho, lo que nos abrirá una ventana en la que
+                    tenemos que elegir la ruta de la carpeta compartida, el nombre y seleccionar la opción de
+                    automontar, para luego darle al botón de aceptar.</p>
+            </div>
+            <div class="card">
+                <img src="assets/cards/step81.png" alt="">
+                <h3>Step 3.</h3>
+                <p>Elegimos la opción remarcada, dando click en el menú de dispositivos.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="card">
+                <img src="assets/cards/step82.png" alt="">
+                <h3>Step 4.</h3>
+                <p>Dentro del explorador de archivos nos dirigimos hacia el disco que acabamos de ingresar.</p>
+            </div>
+            <div class="card">
+                <img src="assets/cards/step83.png" alt="">
+                <h3>Step 5.</h3>
+                <p>Seleccionamos la opción remarcada, al ejecutar se da click en siguiente hasta llegar a instalar y se instala.</p>
+            </div>
+            <div class="card">
+                <img src="assets/cards/step84.png" alt="">
+                <h3>Step 6.</h3>
+                <p>Al finalizar la configuración reiniciaremos para que todo quede bien en nuestro entorno de trabajo y se actualicen los cambios.</p>
+            </div>
+        </div>
     </section>
 
+    <!-- Footer -->
     <footer>
         <div class="main-container">
             <div class="container">
@@ -460,7 +628,7 @@
     </footer>
 
     <!-- Template Main JS File -->
-    <script src="main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

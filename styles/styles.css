@@ -75,6 +75,10 @@ section {
     padding: 20px;
 }
 
+#installation {
+    margin-top: 80px;
+}
+
 .row {
     display: flex;
     flex-direction: row;
